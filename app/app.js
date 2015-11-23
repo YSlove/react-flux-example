@@ -5,16 +5,21 @@ import ChangeTxt from './component_web/test/TextComponent';
 import EventStore from './store/EventStore';
 import TestConstants from './constant/TestConstant';
 
+
+let styles = {
+    content: {
+        margin: '20px auto',
+        fontSize: '2em',
+        textAlign: 'center'
+    }
+}
+
 const App = React.createClass({
 
     getInitialState(){
         return {
             txt: 'Hello World!'
         };
-    },
-
-    componentWillMount(){
-
     },
 
     componentDidMount() {
@@ -34,10 +39,10 @@ const App = React.createClass({
         }
     },
 
-    render () {
+    render() {
         let txt = this.state.txt;
         return (
-            <div>
+            <div style={styles.content}>
             {txt}
             <ChangeTxt />
             </div>

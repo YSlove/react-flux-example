@@ -9,6 +9,16 @@ import React, {
 import TestAction from '../../action/TestAction';
 import TestStore from '../../store/TestStore';
 
+let styles = {
+    testInput: {
+        height: 40,
+        width: 200,
+        borderColor: 'gray',
+        borderWidth: 1,
+        textAlign: 'center'
+    }
+}
+
 const TextComponent = React.createClass({
 
     changeTxt(val){
@@ -20,7 +30,7 @@ const TextComponent = React.createClass({
         return (
             <View>
                 <TextInput
-                style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1}}
+                style={styles.testInput}
                 onChangeText={(text) => this.changeTxt({text})}
                 value={0} />
             </View>
